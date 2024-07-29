@@ -36,6 +36,13 @@ public class LoginSteps {
        RestUtils.post(LoginMap.getLogin(), ContentType.JSON,"auth");
     }
 
+    @Dado("que tenha realizado o login com dados validos")
+    public void queTenhaRealizadoOLoginComDadosValidos() {
+        queEuTenhaUmPayloadValidoDeAPIDeLogin();
+        envioUmaRequisicaoDoTipoPOSTDeLogin();
+        armazenoOTokenQueReceboDoResponseDoLogin();
+    }
+
 
 
 }
